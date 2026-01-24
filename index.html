@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram</title>
+    <title>WhatsApp</title>
 
-    <!-- Meta Pixel Code -->
+    <!-- TikTok Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '748541104443242'); // твой Pixel ID
-    fbq('track', 'PageView');
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;
+      var ttq=w[t]=w[t]||[];
+      ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+      ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+      for(var i=0;i<ttq.methods.length;i++) ttq.setAndDefer(ttq,ttq.methods[i]);
+      ttq.load=function(e){
+        var n=document.createElement("script");n.async=!0;
+        n.src="https://analytics.tiktok.com/i18n/pixel/events.js?sdkid="+e+"&lib="+t;
+        var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(n,r)
+      };
+      ttq.load('D5Q897JC77U9LGUECSNG'); // твой Pixel ID
+      ttq.page();
+    }(window, document, 'ttq');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=748541104443242&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
 
     <style>
         body {
@@ -48,7 +48,7 @@
         }
 
         .btn {
-            background: #1c93ff;
+            background: #25D366; /* зеленый WhatsApp */
             color: #fff;
             padding: 17px 28px;
             font-size: 20px;
@@ -77,15 +77,19 @@
 
 <body>
 
-    <h1>СЕН ІЗДЕГЕН ОТАНДЫҚ ӨНІМ ОСЫНДА👇❤️</h1>
+    <h1>Подключайся в нашу команду тикток стримеров, узнай подробнее по кнопке ниже👇</h1>
 
-    <a class="btn" href="https://t.me/+EzVJcoTJdp45YjUx" target="_blank" id="telegramBtn">Смотреть в телеграм</a>
+    <a class="btn" href="https://wa.me/+77066767536?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B5" target="_blank" id="whatsappBtn">Связаться в WhatsApp</a>
 
     <script>
-        // Отслеживание клика по кнопке как конверсии Facebook Pixel
-        document.getElementById('telegramBtn').addEventListener('click', function() {
-            fbq('track', 'Lead'); // Facebook считает это событием Lead
+        // Отслеживание клика по кнопке как конверсии TikTok Pixel
+        document.getElementById('whatsappBtn').addEventListener('click', function() {
+            ttq.track('Lead'); // TikTok считает это событием Lead
         });
+    </script>
+
+</body>
+</html>
     </script>
 
 </body>
