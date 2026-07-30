@@ -28,10 +28,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     }, 800);
 
     // Событие Lead ТОЛЬКО при нажатии кнопки
-    function openWhatsApp() {
-      fbq('track', 'Lead');
-      window.location.href = wa;
-    }
+   function openWhatsApp() {
+    ttq.track('SubmitForm');
+        window.location.href = wa;
+}
   </script>
 
 </head>
